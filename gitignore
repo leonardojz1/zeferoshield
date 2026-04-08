@@ -1,0 +1,52 @@
+=============================================
+
+ZeferoShield .gitignore — PROTECTED FROM PUBLIC
+
+=============================================
+
+Environment & Secrets
+
+.env .env.local .env..local .env credentials.json secrets.json
+config/secrets/*
+
+API Keys & Tokens
+
+keys/ .key .pem .crt .p12 *.pfx
+
+Commercial / Closed-source modules
+
+src/zeferozero/ src/zeferopulse/ src/zeferovault/ src/zeferoattack/
+zefero-zero/ zefero-pulse/ zefero-vault/ zefero-attack/
+
+Hardware & Device-specific
+
+hardware/ rpi-config/ hailo-config/ npu-firmware/ freenove-hat/
+pi5-specific/ .hcl .toml.local
+
+Build & Runtime artifacts
+
+target/ dist/ build/ out/ node_modules/ .exe .dll .so .dylib
+
+Logs & Temp files
+
+logs/ .log .tmp temp/ cache/
+
+IDE & Editor files
+
+.vscode/ .idea/ .swp .swo .DS_Store
+
+Local development only
+
+docker-compose.override.yml docker-compose.local.yml local/
+
+Test data that may contain real info
+
+test/data/real-* test/secrets/
+
+Patent & Internal documents (if any)
+
+internal/ patent-drafts/ confidential/
+
+Compiled binaries (except ZeferoX public release)
+
+zeferox--private zeferoguard--private

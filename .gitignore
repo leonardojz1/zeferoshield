@@ -1,52 +1,107 @@
-=============================================
+# =============================================
+# ZeferoShield .gitignore — PROTECTED FROM PUBLIC
+# =============================================
 
-ZeferoShield .gitignore — PROTECTED FROM PUBLIC
-
-=============================================
-
-Environment & Secrets
-
-.env .env.local .env..local .env credentials.json secrets.json
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+credentials.json
+secrets.json
 config/secrets/*
 
-API Keys & Tokens
+# API Keys & Tokens
+keys/
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
 
-keys/ .key .pem .crt .p12 *.pfx
+# Blockchain / Wallet — CRITICAL: never commit these
+wallet.json
+mnemonic.txt
+keystore/
+.secret
+hardhat.config.local.js
+*.seed
+private_key.txt
 
-Commercial / Closed-source modules
+# Commercial / Closed-source modules
+src/zeferozero/
+src/zeferopulse/
+src/zeferovault/
+src/zeferoattack/
+zefero-zero/
+zefero-pulse/
+zefero-vault/
+zefero-attack/
 
-src/zeferozero/ src/zeferopulse/ src/zeferovault/ src/zeferoattack/
-zefero-zero/ zefero-pulse/ zefero-vault/ zefero-attack/
+# Hardware & Device-specific
+hardware/
+rpi-config/
+hailo-config/
+npu-firmware/
+freenove-hat/
+pi5-specific/
+*.hcl
+*.toml.local
 
-Hardware & Device-specific
+# Build & Runtime artifacts
+target/
+dist/
+build/
+out/
+node_modules/
+*.exe
+*.dll
+*.so
+*.dylib
 
-hardware/ rpi-config/ hailo-config/ npu-firmware/ freenove-hat/
-pi5-specific/ .hcl .toml.local
+# Rust specific
+Cargo.lock
+**/*.rs.bk
 
-Build & Runtime artifacts
+# Logs & Temp files
+logs/
+*.log
+*.tmp
+temp/
+cache/
 
-target/ dist/ build/ out/ node_modules/ .exe .dll .so .dylib
+# IDE & Editor files
+.vscode/settings.json
+.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
 
-Logs & Temp files
+# Local development only
+docker-compose.override.yml
+docker-compose.local.yml
+local/
 
-logs/ .log .tmp temp/ cache/
+# Test data that may contain real info
+test/data/real-*
+test/secrets/
 
-IDE & Editor files
+# Patent & Internal documents
+internal/
+patent-drafts/
+confidential/
 
-.vscode/ .idea/ .swp .swo .DS_Store
+# ZeferoShield specific
+correction_blocks/
+audit_logs/
+*.sarif
+zfr_ledger.db
+scan_results/
 
-Local development only
-
-docker-compose.override.yml docker-compose.local.yml local/
-
-Test data that may contain real info
-
-test/data/real-* test/secrets/
-
-Patent & Internal documents (if any)
-
-internal/ patent-drafts/ confidential/
-
-Compiled binaries (except ZeferoX public release)
-
-zeferox--private zeferoguard--private
+# Compiled binaries (except ZeferoX public release)
+zeferox-*-private*
+zeferoguard-*-private*

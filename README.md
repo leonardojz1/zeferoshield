@@ -240,4 +240,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
-*Patent Pending — Application #64/015,161 · © 2026 Jose Zelaya / ZeferoShield*
+*Patent Pending — Application #64/015,161 · © 2026 Jose Z / ZeferoShield*
